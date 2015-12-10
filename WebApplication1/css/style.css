@@ -1,0 +1,210 @@
+
+
+ol, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+html {
+    min-height: 100%;
+}
+
+.layout-boxed html,
+.layout-boxed {
+    height: 100%;
+}
+
+body {
+    background-image: url(../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    overflow-y: auto;
+    min-height: 100%;
+}
+
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    text-decoration: none;
+    color: #72afd2;
+}
+
+
+.main-header {
+    position: relative;
+    max-height: 100px;
+    z-index: 1030;
+}
+
+    .main-header > .navbar {
+        margin-bottom: 0;
+        margin-left: 230px;
+        border: none;
+        min-height: 50px;
+        border-radius: 0;
+    }
+
+
+    .main-header .logo {
+        display: block;
+        float: left;
+        height: 50px;
+        font-size: 20px;
+        line-height: 50px;
+        text-align: center;
+        width: 230px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        padding: 0 15px;
+        font-weight: 300;
+    }
+
+
+
+
+.hidden {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+}
+
+.h4 {
+    color: #FFFFFF;
+    margin: 20px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #FDFDFD;
+}
+
+
+.navbar .container {
+    max-width: 870px;
+}
+
+.section .container {
+    max-width: 870px;
+    padding-bottom: 70px;
+    padding-top: 70px;
+}
+
+
+/* Navbar */
+.navbar {
+    border: 0;
+    bottom: -50px;
+    background: #34495e;
+}
+
+.navbar-default .navbar-nav li a {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.navbar-default .navbar-brand {
+    color: #FFFFFF;
+}
+
+    .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav li a:hover {
+        color: #66B6FF;
+    }
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #34495e;
+}
+
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
+    margin-right: auto;
+}
+/* Tile */
+.home .container {
+    max-width: 900px;
+    padding-bottom: 0;
+}
+
+.tile {
+    width: 24%;
+    float: left;
+    margin: 0.5%;
+    position: relative;
+}
+
+    .tile:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+
+    .tile:nth-child(4n+1) {
+        clear: both;
+    }
+
+
+
+.tile-item:hover {
+    color: #ffffff;
+    -webkit-box-shadow: -3px 3px 3px 1px #858585;
+    -moz-box-shadow: -3px 3px 3px 1px #858585;
+    -o-box-shadow: -3px 3px 3px 1px #858585;
+    box-shadow: -3px 3px 3px 1px #858585;
+    -webkit-transform: translate3d(6px, -6px, 0);
+    -moz-transform: translate3d(6px, -6px, 0);
+    -ms-transform: translate3d(6px, -6px, 0);
+    -o-transform: translate3d(6px, -6px, 0);
+    transform: translate3d(6px, -6px, 0);
+    z-index: 100;
+}
+
+.tile-item i {
+    display: block;
+    padding-top: 9%;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.tile-item:hover i {
+    -webkit-transform: scale(1.2) rotate(360deg);
+    -moz-transform: scale(1.2) rotate(360deg);
+    -ms-transform: scale(1.2) rotate(360deg);
+    -o-transform: scale(1.2) rotate(360deg);
+    transform: scale(1.2) rotate(360deg);
+}
+
+.tile-nav {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    display: block;
+    font-size: 19.2px;
+    text-align: center;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.tile .ascensorLink {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    position: absolute;
+}
+
+    .tile .ascensorLink .h5 {
+        font-size: 18px;
+        line-height: 2;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+.tile-azul {
+    background: #66B6FF;
+}

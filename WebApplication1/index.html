@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html ng-app="serviceConsumer">
+<head>
+    <title>Portal</title>
+    <script src="js/angular.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="js/jquery-1.10.2.min.js"></script>
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/skin-blue.css" rel="stylesheet" />
+
+
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="wrapper">
+
+            <div class="skin-blue">
+                <header class="main-header" style="margin-top: -50px; margin-left: -250px;">
+                    <nav class="navbar navbar-static-top" role="navigation">
+                        <a href="#" class="logo"><b><font color="#A30000">HOME</font></b>Page</a>
+                    </nav>
+
+                </header>
+            </div>
+            <br />
+            <br />
+            <div id="ascensor">
+
+                <section class="section home" style="margin-top: 1%">
+                    <div class="center-box">
+                        <div class="container">
+                            <div ng-controller="SitesController">
+
+                                <div class="tile tile-item tile-azul" ng-repeat="i in sites">
+                                    <a class="ascensorLink tile-nav" target="_blank" href="{{i.EndUrlSist}}">
+                                        <h5 class="h5">{{i.NomSite}}</h5>
+                                        <i class="fa fa-{{i.IdCssIcon}} fa-4x"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <script>
+
+            var app = angular.module('serviceConsumer', []);
+
+            app.controller('SitesController', function ($scope, $http) {
+
+                var url = "WebService.asmx/ListarSites";
+
+                $http.get(url)
+                           .success(function (data) {
+
+                               var myjson = JSON.parse(data);
+
+                               $scope.sites = JSON.parse(myjson);
+                           })
+            })
+        </script>
+    </form>
+</body>
+</html>
